@@ -33,13 +33,17 @@ public class Arm extends Subsystem {
     public void Down()
     {
         System.out.println("Arm Down");
-        roller.set(1); //turn roller on
+        roller.set(-1); //turn roller on
         deploy.set(true); //activate solenoid
     }
     public void Up()
     {
         System.out.println("Arm Up");
-        roller.set(0); //turn roller off
+        //roller.set(0); //turn roller off
         deploy.set(false); //activate solenoid
+    }
+    public void RollerOff()
+    {
+        roller.set(0); //turn roller off
     }
 }

@@ -26,12 +26,15 @@ public class  ArmToggle extends Command {
     }
     // Called just before this Command runs the first time
     protected void initialize() {
+        System.out.println("ArmToggle Init");
+        finished = false;
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
         if (finished) {
             return;
         }
+        System.out.println("Arm: "+armDown);
         if (armDown) {
             Robot.arm.Down();
         } else {
