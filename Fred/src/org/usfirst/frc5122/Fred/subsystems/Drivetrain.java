@@ -34,12 +34,25 @@ public class Drivetrain extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
-    public void takeJoystickInputs(Joystick js1)
+    public void takeJoystickInputs(Joystick js1, boolean reverse)
     {
-        robotDrive4.arcadeDrive(js1);
+        if (reverse) {
+            robotDrive4.arcadeDrive(js1.getY(), js1.getX()*-1, false);
+        } else {
+            robotDrive4.arcadeDrive(js1.getY()*-1, js1.getX()*-1, false);
+        }
     }
-    public void stop()
+    public void Stop()
     {
         robotDrive4.drive(0, 0);
+    }
+    public void Drive(double outputMagnitude, double curve)
+    {
+        robotDrive4.drive(outputMagnitude, curve);
+    }
+    
+    public void ArcadeDrive(double moveValue, double rotateValue)
+    {
+        robotDrive4.arcadeDrive(moveValue, rotateValue, true);
     }
 }

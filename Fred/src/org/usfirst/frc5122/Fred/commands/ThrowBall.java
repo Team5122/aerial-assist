@@ -8,6 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 package org.usfirst.frc5122.Fred.commands;
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc5122.Fred.Robot;
 /**
@@ -25,6 +26,8 @@ public class  ThrowBall extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
         System.out.println("Init: Throw Ball");
+        Robot.arm.Down();
+        Timer.delay(.5);
         Robot.thrower.Throw();
     }
     // Called repeatedly when this Command is scheduled to run

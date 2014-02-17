@@ -14,6 +14,7 @@ import org.usfirst.frc5122.Fred.Robot;
  *
  */
 public class  ArcadeDrive extends Command {
+    boolean reversed = false;
     public ArcadeDrive() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -27,7 +28,11 @@ public class  ArcadeDrive extends Command {
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        Robot.drivetrain.takeJoystickInputs(Robot.oi.getDriverJS());
+        if(Robot.oi.getDriverJS().getRawButton(1))
+        {
+            reversed = !reversed;
+        }
+        Robot.drivetrain.takeJoystickInputs(Robot.oi.getDriverJS(), reversed);
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
@@ -35,7 +40,7 @@ public class  ArcadeDrive extends Command {
     }
     // Called once after isFinished returns true
     protected void end() {
-        Robot.drivetrain.stop();
+        Robot.drivetrain.Stop();
     }
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
