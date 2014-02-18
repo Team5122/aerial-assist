@@ -48,7 +48,7 @@ public class RobotMap {
         drivetrainRobotDrive4 = new RobotDrive(drivetrainLF, drivetrainLR,
               drivetrainRF, drivetrainRR);
 	
-        drivetrainRobotDrive4.setSafetyEnabled(true);
+        drivetrainRobotDrive4.setSafetyEnabled(false);
         drivetrainRobotDrive4.setExpiration(0.5);
         drivetrainRobotDrive4.setSensitivity(0.5);
         drivetrainRobotDrive4.setMaxOutput(1.0);

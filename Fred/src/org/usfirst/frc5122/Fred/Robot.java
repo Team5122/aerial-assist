@@ -70,6 +70,7 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
+        Robot.drivetrain.setSafetyEnabled(true);
     }
     /**
      * This function is called periodically during operator control
@@ -82,5 +83,8 @@ public class Robot extends IterativeRobot {
      */
     public void testPeriodic() {
         LiveWindow.run();
+    }
+    public void disabledInit() {
+        ArmToggle.armDown = false;
     }
 }
