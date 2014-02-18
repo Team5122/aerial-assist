@@ -141,7 +141,7 @@ Children:
           validators: [RobotDrive4, ChildDropdownSelected]
           value: Drivetrain LF
         Safety Expiration Time: !!robotbuilder.data.properties.DoubleProperty {default: 0.1,
-          name: Safety Expiration Time, validators: null, value: 0.1}
+          name: Safety Expiration Time, validators: null, value: 0.5}
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: ArcadeDrive}
@@ -434,7 +434,7 @@ Properties:
     folder: false, name: Wiring File, validators: null, value: wireing file.html}
   C++ Windriver Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Windriver\workspace',
     extension: null, folder: true, name: C++ Windriver Workspace, validators: null,
-    value: 'C:\Windriver\workspace'}
+    value: WR}
   Use Default Java Package: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Use Default Java Package, validators: null, value: true}
   Java Package: !!robotbuilder.data.properties.StringProperty {default: org.usfirst.frc0000,
@@ -445,6 +445,6 @@ Properties:
     validators: null, value: 5122}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
-  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\R2D2\NetBeansProjects',
+  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: /home/techplex/NetBeansProjects,
     extension: null, folder: true, name: Java Project Directory, validators: null,
-    value: 'C:\Users\R2D2\Documents\RobotBuilder\fred'}
+    value: ./}
