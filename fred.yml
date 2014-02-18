@@ -426,10 +426,16 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: Arm}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
+  - Name: Auto
+    Base: Command Group
+    Children: []
+    Properties:
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: true}
   Properties: {}
 Properties:
   Autonomous Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-    name: Autonomous Command, type: Command, validators: null, value: Autonomous Command}
+    name: Autonomous Command, type: Command, validators: null, value: Auto}
   Wiring File: !!robotbuilder.data.properties.FileProperty {default: '', extension: html,
     folder: false, name: Wiring File, validators: null, value: wireing file.html}
   C++ Windriver Workspace: !!robotbuilder.data.properties.FileProperty {default: 'C:\Windriver\workspace',
@@ -445,6 +451,6 @@ Properties:
     validators: null, value: 5122}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
-  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: /home/techplex/NetBeansProjects,
+  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\R2D2\NetBeansProjects',
     extension: null, folder: true, name: Java Project Directory, validators: null,
     value: ./}

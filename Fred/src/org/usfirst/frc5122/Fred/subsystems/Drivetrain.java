@@ -53,6 +53,11 @@ public class Drivetrain extends Subsystem {
     
     public void ArcadeDrive(double moveValue, double rotateValue)
     {
-        robotDrive4.arcadeDrive(moveValue, rotateValue, true);
+        robotDrive4.arcadeDrive(moveValue*-1, rotateValue, true);
+    }
+    public void setSafetyEnabled(boolean en)
+    {
+        System.out.println("Set Safety "+en);
+        robotDrive4.setSafetyEnabled(en);
     }
 }
