@@ -15,6 +15,7 @@ import org.usfirst.frc5122.Fred.Robot;
  *
  */
 public class  ThrowBall extends Command {
+    public double start;
     public ThrowBall() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -27,15 +28,18 @@ public class  ThrowBall extends Command {
     protected void initialize() {
         System.out.println("Init: Throw Ball");
         Robot.arm.Down();
-        Timer.delay(.5);
-        Robot.thrower.Throw();
+        start = timeSinceInitialized();
+        //Timer.delay(.5);
+        //Robot.thrower.Throw();
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        if ((timeSinceInitialized()-start) < 1) return;
+        Robot.thrower.Throw();
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return !Robot.thrower.Ready();
+        return !Robot.thrower.Ready() && (timeSinceInitialized()-start) > 1;
     }
     // Called once after isFinished returns true
     protected void end() {

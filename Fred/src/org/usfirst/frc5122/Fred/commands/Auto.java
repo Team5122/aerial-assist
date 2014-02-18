@@ -37,20 +37,20 @@ public class Auto extends CommandGroup {
         // arm.
         Robot.drivetrain.setSafetyEnabled(false);
             System.out.println("Starting Autonomous Mode");
-        addSequential(new Drive(4, .5, 0));     //drive to goal
+        addSequential(new Drive(4.25, .5, 0));     //drive to goal
             System.out.println("At Goal");
         addSequential(new ThrowBall());         //throw ball
             System.out.println("Ball Thrown");
         //addSequential(new ArmToggle(false));    //put arm up
         //System.out.println("Arm Is Up");
         addSequential(new PullBackThrower(), 4);
-        addSequential(new Drive(5, -.5, 0), 5); //drive back to start
+        addSequential(new Drive(5.25, -.5, 0), 5); //drive back to start
         addParallel(new PullBackThrower(), 4);
         
             System.out.println("At Start & Thrower Back");
         addSequential(new ArmToggle(false));    //put arm up
             System.out.println("Arm Is Up");
-        addSequential(new Drive(5, .5, 0));     //drive to goal
+        addSequential(new Drive(4.75, .5, 0));     //drive to goal
         addSequential(new PullBackThrower(), 4);
             System.out.println("At Goal");
         addSequential(new ThrowBall());         //throw ball

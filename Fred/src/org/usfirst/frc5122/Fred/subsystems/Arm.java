@@ -41,7 +41,7 @@ public class Arm extends Subsystem {
         System.out.println("Arm Up");
         
         deploy.set(false); //activate solenoid
-        Timer.delay(1);
+        //Timer.delay(1);
         RollerOff(); //turn roller off
     }
     public void RollerOff()
