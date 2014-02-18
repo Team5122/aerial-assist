@@ -29,11 +29,11 @@ public class  ArcadeDrive extends Command {
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        if (pressed && !Robot.oi.getDriverJS().getRawButton(1)) {
+        if (pressed && !Robot.oi.getReverseButton()) {
             pressed = false;
             reversed = !reversed;
         }
-        if(Robot.oi.getDriverJS().getRawButton(1))
+        if(Robot.oi.getReverseButton())
         {
             pressed = true;
         }

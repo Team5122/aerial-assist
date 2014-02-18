@@ -49,7 +49,7 @@ public class RobotMap {
               drivetrainRF, drivetrainRR);
 	
         drivetrainRobotDrive4.setSafetyEnabled(true);
-        drivetrainRobotDrive4.setExpiration(0.1);
+        drivetrainRobotDrive4.setExpiration(0.5);
         drivetrainRobotDrive4.setSensitivity(0.5);
         drivetrainRobotDrive4.setMaxOutput(1.0);
         drivetrainRobotDrive4.setInvertedMotor(RobotDrive.MotorType.kFrontLeft, true);
