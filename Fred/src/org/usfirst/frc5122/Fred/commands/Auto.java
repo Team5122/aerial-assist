@@ -56,5 +56,16 @@ public class Auto extends CommandGroup {
         addSequential(new ThrowBall());         //throw ball
             System.out.println("Ball Thrown");
             System.out.println("Stop");
+            
+        //Auto #2
+		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
+        addSequential(new Drive(2.5, .75, 0));      //drive to goal
+        addSequential(new ThrowBallFast());
+		//addParallel(new PullBackThrower());		//this really shouldn't be needed
+        addSequential(new Drive(2.75, -.75, 0));    //drive to pickup second ball
+        addSequential(new Drive(2.5, .75, 0));      //drive to goal
+		addSequential(new ThrowBallFast());
+		//addParallel(new PullBackThrower());		//this really shouldn't be needed
+        
     }
 }

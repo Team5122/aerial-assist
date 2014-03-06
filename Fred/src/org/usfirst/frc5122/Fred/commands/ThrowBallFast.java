@@ -8,15 +8,15 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 package org.usfirst.frc5122.Fred.commands;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc5122.Fred.Robot;
 /**
  *
  */
-public class  ThrowBall extends Command {
-    public double start;
-    public ThrowBall() {
+public class  ThrowBallFast extends Command {
+    public boolean offSwitch = false;
+    public boolean finished = false;
+    public ThrowBallFast() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 	
@@ -26,20 +26,18 @@ public class  ThrowBall extends Command {
     }
     // Called just before this Command runs the first time
     protected void initialize() {
-        System.out.println("Init: Throw Ball");
-        Robot.arm.Down();
-        start = timeSinceInitialized();
-        //Timer.delay(.5);
-        //Robot.thrower.Throw();
+        Robot.thrower.Throw();
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        if ((timeSinceInitialized()-start) < 1) return; //wait one second then start the kicker
-        Robot.thrower.Throw();
+        if (Robot.thrower.Ready()) { //if the kicker is still ready we havn't run long enough
+            finished = true;
+        }
+        
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return !Robot.thrower.Ready() && (timeSinceInitialized()-start) > 1; //wait at least one second before finished
+        return finished;
     }
     // Called once after isFinished returns true
     protected void end() {
@@ -49,6 +47,5 @@ public class  ThrowBall extends Command {
     // subsystems is scheduled to run
     protected void interrupted() {
         end();
-        System.out.println("Throw Ball Interrupted");
     }
 }

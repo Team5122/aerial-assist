@@ -35,6 +35,7 @@ public class Arm extends Subsystem {
         System.out.println("Arm Down");
         RollerOn(); //turn roller on
         deploy.set(true); //activate solenoid
+        ArmToggle.armDown = true;
     }
     public void Up()
     {
@@ -43,6 +44,7 @@ public class Arm extends Subsystem {
         deploy.set(false); //activate solenoid
         //Timer.delay(1);
         RollerOff(); //turn roller off
+        ArmToggle.armDown = false;
     }
     public void RollerOff()
     {
