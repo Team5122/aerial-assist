@@ -30,7 +30,7 @@ public class  ThrowBallFast extends Command {
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        if (Robot.thrower.Ready()) { //if the kicker is still ready we havn't run long enough
+        if (!Robot.thrower.Ready()) { //if the kicker is still ready we havn't run long enough
             finished = true;
         }
         
