@@ -35,37 +35,42 @@ public class Auto extends CommandGroup {
         // e.g. if Command1 requires chassis, and Command2 requires arm,
         // a CommandGroup containing them would require both the chassis and the
         // arm.
-        Robot.drivetrain.setSafetyEnabled(false);
-            System.out.println("Starting Autonomous Mode");
-        addSequential(new Drive(4.25, .5, 0));     //drive to goal
-            System.out.println("At Goal");
-        addSequential(new ThrowBall());         //throw ball
-            System.out.println("Ball Thrown");
-        //addSequential(new ArmToggle(false));    //put arm up
-        //System.out.println("Arm Is Up");
-        addSequential(new PullBackThrower(), 4);
-        addSequential(new Drive(5.25, -.5, 0), 5); //drive back to start
-        addParallel(new PullBackThrower(), 4);
-        
-            System.out.println("At Start & Thrower Back");
-        addSequential(new ArmToggle(false));    //put arm up
-            System.out.println("Arm Is Up");
-        addSequential(new Drive(4.75, .5, 0));     //drive to goal
-        addSequential(new PullBackThrower(), 4);
-            System.out.println("At Goal");
-        addSequential(new ThrowBall());         //throw ball
-            System.out.println("Ball Thrown");
-            System.out.println("Stop");
+////        Robot.drivetrain.setSafetyEnabled(false);
+////            System.out.println("Starting Autonomous Mode");
+////        addSequential(new Drive(4.25, .5, 0));     //drive to goal
+////            System.out.println("At Goal");
+////        addSequential(new ThrowBall());         //throw ball
+////            System.out.println("Ball Thrown");
+////        //addSequential(new ArmToggle(false));    //put arm up
+////        //System.out.println("Arm Is Up");
+////        addSequential(new PullBackThrower(), 4);
+////        addSequential(new Drive(5.25, -.5, 0), 5); //drive back to start
+////        addParallel(new PullBackThrower(), 4);
+////        
+////            System.out.println("At Start & Thrower Back");
+////        addSequential(new ArmToggle(false));    //put arm up
+////            System.out.println("Arm Is Up");
+////        addSequential(new Drive(4.75, .5, 0));     //drive to goal
+////        addSequential(new PullBackThrower(), 4);
+////            System.out.println("At Goal");
+////        addSequential(new ThrowBall());         //throw ball
+////            System.out.println("Ball Thrown");
+////            System.out.println("Stop");
             
         //Auto #2
+		addSequential(new Debug("Starting Autonomous"));
 		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
-        addSequential(new Drive(2.5, .75, 0));      //drive to goal
-        addSequential(new ThrowBallFast());
-		//addParallel(new PullBackThrower());		//this really shouldn't be needed
-        addSequential(new Drive(2.75, -.75, 0));    //drive to pickup second ball
-        addSequential(new Drive(2.5, .75, 0));      //drive to goal
+		addSequential(new Drive(2.5, .75, 0));      //drive to goal
+		addSequential(new Debug("At Goal"));
 		addSequential(new ThrowBallFast());
-		//addParallel(new PullBackThrower());		//this really shouldn't be needed
+		addParallel(new PullBackThrower());		//this really shouldn't be needed
+		addSequential(new Drive(2.75, -.75, 0));    //drive to pickup second ball
+		addSequential(new Debug("Picking Up Seconmd Ball"));
+		addSequential(new Drive(2.5, .75, 0));	//drive to goal
+		addSequential(new Debug("At Goal 2"));
+		addSequential(new ThrowBallFast());
+		addParallel(new PullBackThrower());		//this really shouldn't be needed
+		addSequential(new Debug("Done"));
         
     }
 }
