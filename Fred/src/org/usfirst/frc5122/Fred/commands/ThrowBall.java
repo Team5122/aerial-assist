@@ -16,7 +16,7 @@ import org.usfirst.frc5122.Fred.Robot;
  */
 public class  ThrowBall extends Command {
     public double start;
-    public double wait_time = .35;
+    public double wait_time = .5;
     public ThrowBall() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
