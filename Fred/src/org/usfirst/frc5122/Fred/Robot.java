@@ -90,7 +90,7 @@ public class Robot extends IterativeRobot {
         LiveWindow.run();
     }
     public void disabledInit() {
-        ArmToggle.armDown = false;
+        Robot.arm.isArmDown = false;
         if (autonomousCommand != null) autonomousCommand.cancel();
     }
 }

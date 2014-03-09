@@ -28,7 +28,13 @@ public class  ThrowBall extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
         System.out.println("Init: Throw Ball");
-        Robot.arm.Down();
+		
+		if (Robot.arm.isArmDown) {
+			this.wait_time = 0;
+		} else
+		{
+			Robot.arm.Down();
+		}
         start = timeSinceInitialized();
         //Timer.delay(.5);
         //Robot.thrower.Throw();
@@ -40,7 +46,7 @@ public class  ThrowBall extends Command {
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return (timeSinceInitialized()-start) > 2*wait_time; //wait at least one second before finished //!Robot.thrower.Ready() && 
+        return (timeSinceInitialized()-start) > wait_time+.5; //wait at least one second before finished //!Robot.thrower.Ready() && 
     }
     // Called once after isFinished returns true
     protected void end() {

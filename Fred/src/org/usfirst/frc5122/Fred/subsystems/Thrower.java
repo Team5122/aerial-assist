@@ -37,8 +37,7 @@ public class Thrower extends Subsystem {
     }
     public void PullBack()
     {
-        if(!Ready())
-            indexer.set(-1); //run the kicker
+		indexer.set(-1); //run the kicker
     }
     public void Stop()
     {

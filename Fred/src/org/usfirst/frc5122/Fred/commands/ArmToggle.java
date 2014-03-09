@@ -14,7 +14,7 @@ import org.usfirst.frc5122.Fred.Robot;
  *
  */
 public class  ArmToggle extends Command {
-    public static boolean armDown = false;
+    //public static boolean armDown = false;
     public boolean finished = false;
     public ArmToggle() {
         // Use requires() here to declare subsystem dependencies
@@ -27,7 +27,7 @@ public class  ArmToggle extends Command {
     public ArmToggle(boolean armDown)
     {
         requires(Robot.arm);
-        if (this.armDown == armDown)
+        if (Robot.arm.isArmDown == armDown)
         {
             finished = true;
         }
@@ -42,13 +42,13 @@ public class  ArmToggle extends Command {
         if (finished) {
             return;
         }
-        System.out.println("Arm: "+armDown);
-        if (armDown) {
-            Robot.arm.Down();
-        } else {
+        System.out.println("Arm: "+Robot.arm.isArmDown);
+        if (Robot.arm.isArmDown) {
             Robot.arm.Up();
+        } else {
+            Robot.arm.Down();
         }
-        armDown = !armDown;
+        //Robot.arm.isArmDown = !Robot.arm.isArmDown;
         finished = true;
     }
     // Make this return true when this Command no longer needs to run execute()
