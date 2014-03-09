@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ArcadeDrive.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ArmToggle.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/PullBackThrower.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/RunCompressor.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/AutonomousCommand.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ArmRollerOff.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ThrowBall.java</file>
-            <file>file:/home/techplex/Documents/projects/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/RobotMap.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/PullBackThrower.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Wait.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/Robot.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Debug.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ThrowBallFast.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ThrowBall.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Auto.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/OI.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/RobotMap.java</file>
         </group>
     </open-files>
 </project-private>

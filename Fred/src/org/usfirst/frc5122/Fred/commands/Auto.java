@@ -57,16 +57,47 @@ public class Auto extends CommandGroup {
 ////            System.out.println("Ball Thrown");
 ////            System.out.println("Stop");
             
-        //Auto #2
+        //Auto #2 -- working
+//		addSequential(new Debug("Starting Autonomous"));
+//		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
+//		addSequential(new Drive(2.5, .75, 0));      //drive to goal
+//		addSequential(new Debug("At Goal"));
+//		addSequential(new ThrowBallFast());
+//		addParallel(new PullBackThrower());		//this really shouldn't be needed
+//		addSequential(new Drive(2.75, -.75, 0));    //drive to pickup second ball
+//		addSequential(new Debug("Picking Up Seconmd Ball"));
+//		addSequential(new Drive(2.5, .75, 0));	//drive to goal
+//		addSequential(new Debug("At Goal 2"));
+//		addSequential(new ThrowBallFast());
+//		addParallel(new PullBackThrower());		//this really shouldn't be needed
+//		addSequential(new Debug("Done"));
+		
+		//Auto #3 -- Do auto #2 faster (less time)
+//		addSequential(new Debug("Starting Autonomous"));
+//		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
+//		addSequential(new Drive(1.5, .75, 0));      //drive to goal //time, move, turn
+//		addSequential(new Debug("At Goal"));
+//		addSequential(new ThrowBallFast());
+//		addParallel(new PullBackThrower());		//this really shouldn't be needed
+//		addSequential(new Drive(2, -.75, 0));    //drive to pickup second ball
+//		addSequential(new Debug("Picking Up Seconmd Ball"));
+//		addSequential(new Drive(2, .75, 0));	//drive to goal
+//		addSequential(new Debug("At Goal 2"));
+//		addSequential(new ThrowBallFast());
+//		addParallel(new PullBackThrower());		//this really shouldn't be needed
+//		addSequential(new Debug("Done"));
+		
+		double speed = .45;
+		//Auto 4 -- Faster more time less speed
 		addSequential(new Debug("Starting Autonomous"));
 		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
-		addSequential(new Drive(2.5, .75, 0));      //drive to goal
+		addSequential(new Drive(2, speed, 0));      //drive to goal //time, move, turn
 		addSequential(new Debug("At Goal"));
 		addSequential(new ThrowBallFast());
 		addParallel(new PullBackThrower());		//this really shouldn't be needed
-		addSequential(new Drive(2.75, -.75, 0));    //drive to pickup second ball
+		addSequential(new Drive(2.5, speed*-1, 0));    //drive to pickup second ball
 		addSequential(new Debug("Picking Up Seconmd Ball"));
-		addSequential(new Drive(2.5, .75, 0));	//drive to goal
+		addSequential(new Drive(2.5, speed, 0));	//drive to goal
 		addSequential(new Debug("At Goal 2"));
 		addSequential(new ThrowBallFast());
 		addParallel(new PullBackThrower());		//this really shouldn't be needed
