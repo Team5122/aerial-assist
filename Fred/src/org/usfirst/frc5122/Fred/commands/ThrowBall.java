@@ -40,7 +40,7 @@ public class  ThrowBall extends Command {
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return !Robot.thrower.Ready() && (timeSinceInitialized()-start) > wait_time; //wait at least one second before finished
+        return (timeSinceInitialized()-start) > 2*wait_time; //wait at least one second before finished //!Robot.thrower.Ready() && 
     }
     // Called once after isFinished returns true
     protected void end() {

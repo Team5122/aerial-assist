@@ -87,7 +87,7 @@ public class Auto extends CommandGroup {
 //		addParallel(new PullBackThrower());		//this really shouldn't be needed
 //		addSequential(new Debug("Done"));
 		
-		double speed = .45;
+		double speed = .6;
 		//Auto 4 -- Faster more time less speed
 		addSequential(new Debug("Starting Autonomous"));
 		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
@@ -97,7 +97,7 @@ public class Auto extends CommandGroup {
 		addParallel(new PullBackThrower());		//this really shouldn't be needed
 		addSequential(new Drive(2.5, speed*-1, 0));    //drive to pickup second ball
 		addSequential(new Debug("Picking Up Seconmd Ball"));
-		addSequential(new Drive(2.5, speed, 0));	//drive to goal
+		addSequential(new Drive(3.5, speed, 0));	//drive to goal
 		addSequential(new Debug("At Goal 2"));
 		addSequential(new ThrowBallFast());
 		addParallel(new PullBackThrower());		//this really shouldn't be needed

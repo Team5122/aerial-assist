@@ -27,7 +27,7 @@ public class  PullBackThrower extends Command {
     }
     // Called just before this Command runs the first time
     protected void initialize() {
-        finished = false;
+        //finished = false;
         if (!Robot.thrower.Ready())
         {
             Robot.thrower.PullBack();
@@ -36,15 +36,12 @@ public class  PullBackThrower extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
 		if (Robot.thrower.Ready()) {
-			readyCounter++;
-			if (readyCounter >= 5) {	//stupid magic numbers
-				finished = true;
-			}
+			Robot.thrower.Stop();
 		}
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return finished;
+        return false;
     }
     // Called once after isFinished returns true
     protected void end() {
