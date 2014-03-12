@@ -305,6 +305,29 @@ Children:
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Default Command, type: Command, validators: null, value: None}
+  - Name: Decorations
+    Base: Subsystem
+    Children:
+    - Name: TeleopSignal
+      Base: Digital Output
+      Children: []
+      Properties:
+        Output Module (Digital): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2']
+          default: '1'
+          name: Output Module (Digital)
+          validators: [DigitalChannel]
+          value: '1'
+        Output Channel (Digital): !!robotbuilder.data.properties.ChoicesProperty
+          choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+            '13', '14']
+          default: '1'
+          name: Output Channel (Digital)
+          validators: [DigitalChannel]
+          value: '5'
+    Properties:
+      Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
+        name: Default Command, type: Command, validators: null, value: None}
   Properties: {}
 - Name: Operator Interface
   Base: OI
@@ -511,6 +534,6 @@ Properties:
     validators: null, value: 5122}
   Export Commands: !!robotbuilder.data.properties.BooleanProperty {default: true,
     name: Export Commands, validators: null, value: true}
-  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: 'C:\Users\R2D2\NetBeansProjects',
+  Java Project Directory: !!robotbuilder.data.properties.FileProperty {default: /home/techplex/NetBeansProjects,
     extension: null, folder: true, name: Java Project Directory, validators: null,
     value: ./}
