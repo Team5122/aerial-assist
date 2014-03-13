@@ -87,21 +87,21 @@ public class Auto extends CommandGroup {
 //		addParallel(new PullBackThrower());		//this really shouldn't be needed
 //		addSequential(new Debug("Done"));
 		
-		double speed = .7;
-                double time2goal = 2.5;
+		double speed = .6;
+                double time2goal = 3;
 		//Auto 4 -- Faster more time less speed
 		addSequential(new Debug("Starting Autonomous"));
-		addParallel(new DelayedArmDown(1));         //wait for the given time then put the arm down
+		addParallel(new DelayedArmDown(0));         //wait for the given time then put the arm down
 		addSequential(new Drive(time2goal, speed, 0));      //drive to goal //time, move, turn
 		addSequential(new Debug("At Goal"));
 		addSequential(new ThrowBallFast());
-		addParallel(new PullBackThrower());		//this really shouldn't be needed
-		addSequential(new Drive(time2goal+.5, speed*-1, 0));    //drive to pickup second ball
-		addSequential(new Debug("Picking Up Seconmd Ball"));
-		addSequential(new Drive(time2goal+1, speed, 0));	//drive to goal
-		addSequential(new Debug("At Goal 2"));
-		addSequential(new ThrowBallFast());
-		addParallel(new PullBackThrower());		//this really shouldn't be needed
+		addSequential(new PullBackThrower());		//this really shouldn't be needed
+//		addSequential(new Drive(time2goal+.5, speed*-1, 0));    //drive to pickup second ball
+//		addSequential(new Debug("Picking Up Seconmd Ball"));
+//		addSequential(new Drive(time2goal+1, speed, 0));	//drive to goal
+//		addSequential(new Debug("At Goal 2"));
+//		addSequential(new ThrowBallFast());
+//		addParallel(new PullBackThrower());		//this really shouldn't be needed
 		addSequential(new Debug("Done"));
         
     }
