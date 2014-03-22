@@ -16,7 +16,7 @@ import org.usfirst.frc5122.Fred.Robot;
  */
 public class  ThrowBall extends Command {
     public double start;
-    public double wait_time = .5;
+    public double wait_time;
     public ThrowBall() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -28,6 +28,7 @@ public class  ThrowBall extends Command {
     // Called just before this Command runs the first time
     protected void initialize() {
         System.out.println("Init: Throw Ball");
+        wait_time = .5;
 		
 		if (Robot.arm.isArmDown) {
 			this.wait_time = 0;
