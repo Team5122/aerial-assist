@@ -40,7 +40,8 @@ public class  PullBackThrower extends Command {
     protected void execute() {
 		if (Robot.thrower.Ready()) {
 			Robot.thrower.Stop();
-			System.out.println("Done Pullback "+timeSinceInitialized());
+                        
+			//System.out.println("Done Pullback "+timeSinceInitialized());
 		} else {
 			System.out.println("Pulling Back "+timeSinceInitialized());
 		}

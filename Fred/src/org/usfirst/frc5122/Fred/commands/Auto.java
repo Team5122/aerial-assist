@@ -88,7 +88,7 @@ public class Auto extends CommandGroup {
 //		addSequential(new Debug("Done"));
 		
 		double speed = .6;
-                double time2goal = 3;
+                double time2goal = 3.5;
 		//Auto 4 -- Faster more time less speed
 		addSequential(new Debug("Starting Autonomous"));
 		addParallel(new DelayedArmDown(0));         //wait for the given time then put the arm down
