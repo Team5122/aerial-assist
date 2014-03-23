@@ -74,6 +74,7 @@ public class Robot extends IterativeRobot {
         Scheduler.getInstance().run();
     }
     public void teleopInit() {
+        System.out.println("------- Teleop! -------");
         Robot.decorations.setTeleop();
 		// This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to 
@@ -96,6 +97,7 @@ public class Robot extends IterativeRobot {
     }
     public void disabledInit() {
         Robot.arm.isArmDown = false;
+        Robot.arm.Up();
         if (autonomousCommand != null) autonomousCommand.cancel();
     }
 }
