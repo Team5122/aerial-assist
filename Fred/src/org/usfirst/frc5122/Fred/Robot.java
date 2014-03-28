@@ -88,6 +88,8 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        LiveWindow.run();
+        LiveWindow.addSensor("Distance", "Ultrasonic", RobotMap.distanceUltrasonic);
     }
     /**
      * This function called periodically during test mode
