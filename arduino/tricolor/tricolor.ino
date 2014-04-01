@@ -204,13 +204,14 @@ void setup() {
 // *****************************************************************************
 void loop() 
 {
-	if(digitalRead(TELEOP_PIN)){
-	  send_1M_pattern(green_pink_cross, 26, 200);
-	}
-	else
-	{
-		send_1M_pattern(blink_green_pink, 2, 600);
-	}
+	send_1M_pattern(green_pink_cross, 26, 200);
+	// if(digitalRead(TELEOP_PIN)){
+	//   send_1M_pattern(green_pink_cross, 26, 200);
+	// }
+	// else
+	// {
+	// 	send_1M_pattern(blink_green_pink, 2, 600);
+	// }
 	// while (1)
 	// {
 		
