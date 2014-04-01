@@ -25,7 +25,7 @@ void setup()
 	Serial.begin(9600);
 	irrecv.enableIRIn(); // Start the receiver
 	pinMode(OUT_PIN, OUTPUT);
-	digitalWrite(OUT_PIN, LOW);
+	digitalWrite(OUT_PIN, HIGH);
 }
 
 void loop() {
@@ -35,7 +35,7 @@ void loop() {
 				seen_code = true;
 		}
 		if(seen_code){
-				digitalWrite(OUT_PIN, HIGH);
+				digitalWrite(OUT_PIN, LOW);
 				// delay(500);
 				// digitalWrite(OUT_PIN, LOW);
 				// seen_code = false;
