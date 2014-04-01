@@ -22,21 +22,24 @@ decode_results results;
 
 void setup()
 {
-  Serial.begin(9600);
-  irrecv.enableIRIn(); // Start the receiver
-  pinMode(OUT_PIN, OUTPUT);
-  digitalWrite(OUT_PIN, LOW);
+	Serial.begin(9600);
+	irrecv.enableIRIn(); // Start the receiver
+	pinMode(OUT_PIN, OUTPUT);
+	digitalWrite(OUT_PIN, LOW);
 }
 
 void loop() {
-  if (irrecv.decode(&results)) {
-    Serial.println(results.value, HEX);
-    if(results.value == 0x20DFA25D){ //large play button in the middle
-        seen_code = true;
-    }
-    if(seen_code){
-        digitalWrite(OUT_PIN, HIGH);
-    }
-    irrecv.resume(); // Receive the next value
-  }
+	if (irrecv.decode(&results)) {
+		Serial.println(results.value, HEX);
+		if(results.value == 0x20DFA25D){ //large play button in the middle
+				seen_code = true;
+		}
+		if(seen_code){
+				digitalWrite(OUT_PIN, HIGH);
+				// delay(500);
+				// digitalWrite(OUT_PIN, LOW);
+				// seen_code = false;
+		}
+		irrecv.resume(); // Receive the next value
+	}
 }
