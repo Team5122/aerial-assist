@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/RobotMap.java</file>
+            <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/TwoBallAuto.java</file>
+            <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/WaitForIR.java</file>
+            <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/subsystems/IR.java</file>
+            <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/IRAuto.java</file>
             <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Auto.java</file>
             <file>file:/home/techplex/Documents/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/Robot.java</file>
         </group>
