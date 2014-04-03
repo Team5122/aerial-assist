@@ -9,8 +9,9 @@
 #include <IRremote.h>
 
 // Settings
-int RECV_PIN = 11;
-int OUT_PIN = 2;
+int RECV_PIN = 13;
+int OUT_PIN = 12;
+int DISP_PIN = 2;
 
 // Globals
 bool seen_code = false;
@@ -26,6 +27,9 @@ void setup()
 	irrecv.enableIRIn(); // Start the receiver
 	pinMode(OUT_PIN, OUTPUT);
 	digitalWrite(OUT_PIN, HIGH);
+	pinMode(DISP_PIN, OUTPUT);
+	digitalWrite(DISP_PIN, LOW);
+	
 }
 
 void loop() {
@@ -36,6 +40,7 @@ void loop() {
 		}
 		if(seen_code){
 				digitalWrite(OUT_PIN, LOW);
+				digitalWrite(DISP_PIN, HIGH);
 				// delay(500);
 				// digitalWrite(OUT_PIN, LOW);
 				// seen_code = false;
