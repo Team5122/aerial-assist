@@ -32,6 +32,6 @@ public class IR extends Subsystem {
     
     public boolean Seen()
     {
-        return iRCode.get();
+        return !iRCode.get();
     }
 }
