@@ -37,7 +37,7 @@ public class IRAuto extends CommandGroup {
         
         double speedFWD = 0.7;
         double speedBAK = -0.8;
-        double time2goal = 2.25;
+        double time2goal = 2;
         // Single ball with wait based on IR
         addSequential(new Debug("Starting Autonomous"));
         addParallel(new DelayedArmDown(0));         //wait for the given time then put the arm down
