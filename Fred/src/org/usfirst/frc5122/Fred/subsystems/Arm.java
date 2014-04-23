@@ -62,4 +62,3 @@ public class Arm extends Subsystem {
 		roller.set(1);
 	}
 	}		
-
