@@ -57,4 +57,9 @@ public class Arm extends Subsystem {
     {
         roller.set(-1); //turn roller off
     }
-}
+	public void RollerOut()
+	{
+		roller.set(1);
+	}
+	}		
+

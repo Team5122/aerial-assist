@@ -26,6 +26,7 @@ public class  PopBall extends Command {
     protected void initialize() {
         this.setTimeout(2); //give it 2 seconds to go out
         Robot.throwup.Out();
+		Robot.arm.RollerOut();
     }
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
