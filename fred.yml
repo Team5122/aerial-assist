@@ -631,6 +631,12 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: Throwup}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
+  - Name: CheesyAuto
+    Base: Command Group
+    Children: []
+    Properties:
+      Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
+        name: Button on SmartDashboard, validators: null, value: false}
   - Name: Wait For Cheesy
     Base: Command
     Children: []
@@ -638,8 +644,8 @@ Children:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: None}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
-        name: Button on SmartDashboard, validators: null, value: true}
-  - Name: CheesyAuto
+        name: Button on SmartDashboard, validators: null, value: false}
+  - Name: OneBallWaitAuto
     Base: Command Group
     Children: []
     Properties:
