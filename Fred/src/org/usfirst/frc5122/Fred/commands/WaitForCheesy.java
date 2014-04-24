@@ -34,12 +34,14 @@ public class  WaitForCheesy extends Command {
     }
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        if (RobotMap.CheesyServer.getLeftCount() > MIN_COUNT || RobotMap.CheesyServer.getRightCount() > MIN_COUNT) {
-            return (timeSinceInitialized()-start) > delay;
+//        if (RobotMap.CheesyServer.getLeftCount() > MIN_COUNT || RobotMap.CheesyServer.getRightCount() > MIN_COUNT) 
+		if (RobotMap.CheesyServer.getLeftStatus() || RobotMap.CheesyServer.getRightStatus()) 
+		{
+            return true;
         }
         else
         {
-            return true;
+			return (timeSinceInitialized()-start) > delay;
         }
     }
     // Called once after isFinished returns true
