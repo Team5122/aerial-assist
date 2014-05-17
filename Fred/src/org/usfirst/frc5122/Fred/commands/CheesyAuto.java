@@ -36,8 +36,7 @@ public class CheesyAuto extends CommandGroup {
         // a CommandGroup containing them would require both the chassis and the
         // arm.
 		
-		double speedFWD = 0.7;
-        double speedBAK = -0.8;
+		double speedFWD = 0.65;
         double time2goal = 2;
         // Single ball with wait based on IR
         addSequential(new Debug("Starting Autonomous"));

@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/IRAuto.java</file>
-            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Wait.java</file>
             <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/Robot.java</file>
             <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/CheesyAuto.java</file>
-            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/WaitForCheesy.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/ThrowBallFast.java</file>
             <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/OneBallWaitAuto.java</file>
-            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/WaitForIR.java</file>
-            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/OI.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Drive.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/TwoBallAuto.java</file>
+            <file>file:/C:/Users/R2D2/Documents/RobotBuilder/aerial-assist/Fred/src/org/usfirst/frc5122/Fred/commands/Auto.java</file>
         </group>
     </open-files>
 </project-private>
