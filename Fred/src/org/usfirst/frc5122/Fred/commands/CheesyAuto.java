@@ -11,6 +11,7 @@
 
 package org.usfirst.frc5122.Fred.commands;
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import edu.wpi.first.wpilibj.command.WaitCommand;
 
 /**
  *
@@ -43,10 +44,11 @@ public class CheesyAuto extends CommandGroup {
         addParallel(new DelayedArmDown(0));         //wait for the given time then put the arm down
         addSequential(new Drive(time2goal, speedFWD, 0));      //drive to goal //time, move, turn
         addSequential(new Debug("At Goal"));
-        addSequential(new WaitForCheesy(3));
+		addSequential(new WaitCommand(1));
+        addSequential(new WaitForCheesy(2));
         addSequential(new ThrowBallFast());
         addSequential(new Debug("Pullback!"));
-        addParallel(new PullBackThrower(true));		//this really shouldn't be needed
+//        addParallel(new PullBackThrower(true));		//this really shouldn't be needed
         addSequential(new Debug("Done"));
 
     }

@@ -35,7 +35,7 @@ public class  WaitForCheesy extends Command {
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
 //        if (RobotMap.CheesyServer.getLeftCount() > MIN_COUNT || RobotMap.CheesyServer.getRightCount() > MIN_COUNT) 
-		if (RobotMap.CheesyServer.getLeftStatus() || RobotMap.CheesyServer.getRightStatus()) 
+		if (!(RobotMap.CheesyServer.getLeftStatus() || RobotMap.CheesyServer.getRightStatus()))
 		{
             return true;
         }

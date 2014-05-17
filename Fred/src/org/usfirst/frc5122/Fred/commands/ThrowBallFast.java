@@ -16,7 +16,7 @@ import org.usfirst.frc5122.Fred.Robot;
 public class  ThrowBallFast extends Command {
     private final double start;
     private boolean finished = false;
-    private final double delay = .25;
+    private final double delay = .125;
     public ThrowBallFast() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
@@ -34,8 +34,10 @@ public class  ThrowBallFast extends Command {
     protected void execute() {
         //if the kicker is still ready we havn't run long enough
         //make sure the kicker runs for at least delay seconds
-        if (!Robot.thrower.Ready() && timeSinceInitialized()-start > delay) {
+        if (timeSinceInitialized()-start > delay) //!Robot.thrower.Ready() && 
+		{
             finished = true;
+			Robot.thrower.Stop();
         }
         
     }
